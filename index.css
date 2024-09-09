@@ -6,17 +6,64 @@ body {
   width: auto;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  border-radius: 20px;
+  width: 30%;
+  height: auto;
+  margin: 15px;
+}
+
+main h1,
+main p {
+  text-align: center;
+  margin: auto;
+}
+
+.userUploads,
+.results {
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.userContainer,
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  border: 1px solid rgb(254, 180, 123);
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.userContainer p,
+.resultsContainer p {
+  font-size: 1.8rem;
+}
+
+main div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
   position: relative;
+  width: 100%;
 }
 
 .xLink {
