@@ -1,3 +1,52 @@
+:root {
+  /* https://github.com/features/codespaces
+      Style inspiration rgb(8, 8, 9)*/
+  --color-background: black;
+  --color-dark-panel: rgb(14, 15, 15);
+  --color-borders: rgb(57, 57, 57);
+  --color-blue: rgb(66, 107, 243);
+  --color-purple: rgb(171, 125, 248);
+  --color-peach: rgb(255, 126, 95);
+  --color-orange: rgb(254, 180, 123);
+}
+
+.threeD {
+  box-shadow:
+    inset .5px 1px 1px rgba(125, 147, 176, 0.2),
+    inset .5px 2px 2px rgba(125, 147, 176, 0.05),
+    inset 0 3px 3px rgba(21, 27, 35, 0.05),
+    inset 0 4px 4px rgba(21, 27, 35, 0.1),
+    0px 5px 10px rgba(0, 0, 0, 1),
+    -15px -20px 20px rgba(255, 255, 255, .02);
+
+  background-color: var(--color-dark-panel) !important;
+  border-radius: 6px !important;
+  border: 1px solid black !important;
+}
+
+/* Custom scrollbar styles for webkit-based browsers */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-panel);
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Optional: Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Color of the scrollbar thumb when hovered */
+}
+
 html,
 body {
   background-color: black;
@@ -25,19 +74,41 @@ header {
   align-items: center;
   font-size: 100%;
   margin-bottom: 50px;
+  position: absolute;
+  background: rgba(134, 134, 134, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
+  backdrop-filter: blur(10px);
+}
+
+header img {
+  width: 30px;
+}
+
+header p {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+header p span {
+  color: var(--color-peach);
+  /* Gradient text for supported browsers */
+  background: linear-gradient(45deg, var(--color-peach), var(--color-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Standard property */
+  text-fill-color: transparent;
+  /* Safari? */
+}
+
+main {
+  margin-top: 100px;
 }
 
 .bannerText {
   font-size: 50%;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-img {
-  border-radius: 20px;
-  width: 30%;
-  min-width: 250px;
-  height: auto;
-  margin: 15px;
 }
 
 main h1,
@@ -47,26 +118,14 @@ main p {
   width: 50%;
 }
 
-.userUploads,
-.results {
-  height: auto;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
 .userContainer,
 .resultsContainer {
   display: flex;
   flex-direction: column;
   width: 75%;
   margin: auto;
-  /* border: 2px solid rgb(26, 140, 216); */
-  border-radius: 20px;
   margin-top: 25px;
-  box-shadow: 2px 0px 10px rgba(81, 65, 255, 0.4);
-  padding: 15px;
+  padding: 20px;
 }
 
 .userContainer p,
@@ -75,20 +134,23 @@ main p {
   padding: 15px;
   border-radius: 20px;
   border-bottom: 1px solid rgba(255, 126, 95, .3);
-  box-shadow: 0px 5px 5px rgba(255, 126, 95, .2),
-      inset .5px 1px 1px rgba(125, 147, 176, 0.2),
-        inset .5px 2px 2px rgba(125, 147, 176, 0.05),
-        inset 0 3px 3px rgba(21, 27, 35, 0.05),
-        inset 0 4px 4px rgba(21, 27, 35, 0.1),
-        0px 5px 10px rgba(0, 0, 0, 1),
-        -15px -20px 20px rgba(255, 255, 255, .02);
 }
 
-main div {
+.userUploads,
+.results {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.userUploads img,
+.results img {
+  border-radius: 20px;
+  width: 30%;
+  min-width: 250px;
+  height: auto;
+  margin: 10px;
+  border: 1.5px solid blueviolet;
 }
 
 footer {
@@ -108,7 +170,7 @@ footer {
   font-weight: 800;
   padding: 10px;
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   right: -2px;
   display: flex;
   align-items: center;
