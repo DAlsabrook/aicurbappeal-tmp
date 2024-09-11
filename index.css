@@ -16,9 +16,26 @@ body{
   align-items: center;
 }
 
+header {
+  width: 100%;
+  border-bottom: 1px solid grey;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100%;
+  margin-bottom: 50px;
+}
+
+.bannerText {
+  font-size: 50%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 img {
   border-radius: 20px;
   width: 30%;
+  min-width: 250px;
   height: auto;
   margin: 15px;
 }
@@ -45,14 +62,26 @@ main p {
   flex-direction: column;
   width: 75%;
   margin: auto;
-  border: 2px solid rgb(26, 140, 216);
+  /* border: 2px solid rgb(26, 140, 216); */
   border-radius: 20px;
   margin-top: 25px;
+  box-shadow: 2px 0px 10px rgba(81, 65, 255, 0.4);
+  padding: 15px;
 }
 
 .userContainer p,
 .resultsContainer p {
   font-size: 1.8rem;
+  padding: 15px;
+  border-radius: 20px;
+  border-bottom: 1px solid rgba(255, 126, 95, .3);
+  box-shadow: 0px 5px 5px rgba(255, 126, 95, .2),
+      inset .5px 1px 1px rgba(125, 147, 176, 0.2),
+        inset .5px 2px 2px rgba(125, 147, 176, 0.05),
+        inset 0 3px 3px rgba(21, 27, 35, 0.05),
+        inset 0 4px 4px rgba(21, 27, 35, 0.1),
+        0px 5px 10px rgba(0, 0, 0, 1),
+        -15px -20px 20px rgba(255, 255, 255, .02);
 }
 
 main div {
@@ -65,6 +94,7 @@ main div {
 footer {
   position: relative;
   width: 100%;
+  margin-top: 100px;
 }
 
 .xLink {
