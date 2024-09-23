@@ -122,6 +122,7 @@ main p {
 .resultsContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 90%;
   margin: auto;
   margin-top: 25px;
